@@ -1,0 +1,10 @@
+name: explession
+on: push
+jobs:
+  printAndGreeting:
+    runs-on: ubuntu-latest
+    env:
+      OWNER: ${{ github.repository_owner }}
+      PASS: ${{ secrets.PASS }}
+    steps:
+      - run: echo "$OWNER to letter $PASS"
