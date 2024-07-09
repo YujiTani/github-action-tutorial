@@ -4,4 +4,4 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.ref_name }}
+      - run: echo ${{ github.repositoryUrl }}
