@@ -6,5 +6,7 @@ jobs:
     env:
       OWNER: ${{ github.repository_owner }}
       PASS: ${{ secrets.PASS }}
+      URL: ${{ github.event.*.html_url }}
     steps:
       - run: echo "$OWNER to letter $PASS"
+      - run: echo "$URL"
