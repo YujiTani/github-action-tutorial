@@ -1,0 +1,12 @@
+name: overrideEmvironment
+on: push
+env:
+  EXAMPLE: "example"
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$EXAMPLE"
+      - env:
+          EXAMPLE: "override"
+        run: echo "$EXAMPLE"
