@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PASSWORD: ${{ secrets.PASSWORD }}
+      PASS: ${{ secrets.PASS }}
     steps:
       - run: echo "${ PASSWORD }"
       - run: echo "${ PASSWORD:0:1 } ${PASSWORD#?}"
+      - run: echo "${ PASS }"
