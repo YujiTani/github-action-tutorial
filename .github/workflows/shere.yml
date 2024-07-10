@@ -4,6 +4,6 @@ jobs:
   share:
     runs-on: ubuntu-latest
     env:
-      RESULT: ${ "result" }
+      RESULT: "result"
     steps:
       - run: echo "${RESULT}"
