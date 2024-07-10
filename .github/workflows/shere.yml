@@ -3,6 +3,7 @@ on: push
 jobs:
   share:
     runs-on: ubuntu-latest
+    env:
+      RESULT: ${ "result" }
     steps:
-      - run: export RESULT="result"
       - run: echo "${RESULT}"
